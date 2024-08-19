@@ -3,14 +3,13 @@
 @tailwind utilities;
 
 :root {
-    --accent-color: #0066ff;
-
+    --accent-color: #427bd1;
 }
-
 
 .selected {
     color: var(--accent-color);
 }
+
 
 .article-title::after {
     content: "";
