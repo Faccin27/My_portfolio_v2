@@ -1,3 +1,26 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+:root {
+    --accent-color: #0066ff;
+
+}
+
+
+.selected {
+    color: var(--accent-color);
+}
+
+.article-title::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 40px;
+    height: 6px;
+    background: var(--accent-color);
+    border-radius: 3px;
+  }
+
+  
