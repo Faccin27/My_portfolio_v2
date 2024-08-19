@@ -1,21 +1,20 @@
 export default function AboutMe() {
     return (
         <div className="p-6">
-            <h3 className="text-xl font-bold mb-4">Sobre Mim</h3>
             <p className="text-white">
-                Olá! Meu nome é Alex Silva, sou um desenvolvedor web apaixonado por criar experiências digitais envolventes e funcionais. 
-                Com uma formação em Ciência da Computação e mais de 5 anos de experiência na indústria de tecnologia, 
-                tenho trabalhado em diversos projetos que vão desde aplicações web interativas até soluções de software personalizadas.
+                I'm a passionate full-stack developer with a strong foundation in both frontend and backend development. 
+                Over the years, I have evolved from focusing solely on frontend to mastering the complete software development lifecycle. 
+                My journey began with a deep curiosity for technology, which led me to explore various fields, including industrial automation and cybersecurity. 
+                Today, I bring a well-rounded skill set that combines creativity, technical expertise, and a problem-solving mindset. 
+
             </p>
             <p className="text-white mt-4">
-                Meu interesse em tecnologia começou cedo, e ao longo dos anos desenvolvi habilidades em uma variedade de linguagens de programação 
-                e ferramentas, incluindo JavaScript, React, Node.js e bancos de dados SQL. Adoro resolver problemas complexos e estou sempre em busca 
-                de novas oportunidades para aprender e crescer.
+            Whether it's designing intuitive user interfaces or architecting robust backend systems, 
+                I approach every project with the same dedication and attention to detail that I've had since I started coding at 15. 
+                I am continuously learning and adapting to new technologies, 
+                ensuring that I can deliver scalable, secure, and innovative solutions for any challenge.
             </p>
-            <p className="text-white mt-4">
-                Fora do trabalho, gosto de explorar a natureza, ler sobre ciência e tecnologia, e passar tempo com amigos e família. 
-                Se você estiver interessado em discutir projetos ou apenas bater um papo sobre tecnologia, sinta-se à vontade para entrar em contato!
-            </p>
+
         </div>
     );
 }

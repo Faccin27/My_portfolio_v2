@@ -4,7 +4,10 @@ import Sidebar from './components/sidebar'
 function Layout() {
     return (
         <>
-            <Content />
+            <div className='flex justify-center bg-zinc-950'>
+                <Sidebar />
+                <Content />
+            </div>
         </>
     );
 }

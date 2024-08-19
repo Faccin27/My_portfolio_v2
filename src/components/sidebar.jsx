@@ -25,25 +25,25 @@ export default function Component() {
                     <div className="space-y-4">
                         <div className="flex items-center text-gray-300 p-3">
                             <div className="bg-gradient-to-br from-zinc-700 to-zinc-800 rounded-lg p-3 mr-4 shadow-md transform hover:scale-105 transition-transform duration-200">
-                                <MailIcon className="w-6 h-6" color="#B3EBF2" />
+                                <MailIcon className="w-6 h-6 selected"  />
                             </div>
                             <span className="text-sm">gfaccin27@gmail.com</span>
                         </div>
                         <div className="flex items-center text-gray-300 p-3">
                             <div className="bg-gradient-to-br from-zinc-700 to-zinc-800 rounded-lg p-3 mr-4 shadow-md transform hover:scale-105 transition-transform duration-200">
-                                <PhoneIcon className="w-6 h-6" color="#B3EBF2" />
+                                <PhoneIcon className="w-6 h-6 selected" />
                             </div>
                             <span className="text-sm">+55 (49) 99921-5720</span>
                         </div>
                         <div className="flex items-center text-gray-300 p-3">
                             <div className="bg-gradient-to-br from-zinc-700 to-zinc-800 rounded-lg p-3 mr-4 shadow-md transform hover:scale-105 transition-transform duration-200">
-                                <CalendarIcon className="w-6 h-6" color="#B3EBF2" />
+                                <CalendarIcon className="w-6 h-6 selected"  />
                             </div>
                             <span className="text-sm">August 27, 2005</span>
                         </div>
                         <div className="flex items-center text-gray-300 p-3">
                             <div className="bg-gradient-to-br from-zinc-700 to-zinc-800 rounded-lg p-3 mr-4 shadow-md transform hover:scale-105 transition-transform duration-200">
-                                <MapPinIcon className="w-6 h-6" color="#B3EBF2" />
+                                <MapPinIcon className="w-6 h-6 selected"/>
                             </div>
                             <span className="text-sm text-center">Joaçaba, Santa Catarina <br />BRA</span>
                             
