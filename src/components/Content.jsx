@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import AboutMe from './AboutMe';
 import Resume from './Resume';
@@ -14,6 +14,14 @@ const variants = {
 
 export default function Component() {
     const [selected, setSelected] = useState('about me');
+
+    useEffect(() => {
+        // Carregar e aplicar a cor salva ao iniciar a aplicação
+        const savedColor = localStorage.getItem('accentColor');
+        if (savedColor) {
+            document.documentElement.style.setProperty('--accent-color', savedColor);
+        }
+    }, []);
 
     const handleSelection = (section) => {
         setSelected(section);
@@ -38,7 +46,7 @@ export default function Component() {
 
     return (
         <div className="flex items-center justify-center min-h-screen bg-zinc-950 p-6">
-            <div className="bg-zinc-900 rounded-lg w-full  max-w-4xl mx-auto border-white border-opacity-10 border-[0.5px] min-w-[896px] min-h-[600px]">
+            <div className="bg-zinc-900 rounded-lg w-full max-w-4xl mx-auto border-white border-opacity-10 border-[0.5px] min-w-[896px] min-h-[600px]">
                 <div className="relative flex items-center justify-between mb-6">
                     <h2 className="text-3xl font-semibold text-white relative mt-7 ml-8">
                         {selected.charAt(0).toUpperCase() + selected.slice(1)}
@@ -46,41 +54,16 @@ export default function Component() {
                     </h2>
                     <nav className="flex items-center">
                         <div className="bg-zinc-800 mb-8 flex items-center rounded-bl-lg rounded-tr-lg overflow-hidden border-white border-opacity-10 border-[0.5px]">
-                            <a
-                                href="#about"
-                                className={`text-white hover:scale-95 px-6 py-4 transition-transform duration-300 ${selected === 'about me' ? 'selected' : ''}`}
-                                onClick={(e) => { e.preventDefault(); handleSelection('about me'); }}
-                            >
-                                About me
-                            </a>
-                            <a
-                                href="#resume"
-                                className={`text-white hover:scale-95 px-6 py-4 transition-transform duration-300 ${selected === 'resume' ? 'selected' : ''}`}
-                                onClick={(e) => { e.preventDefault(); handleSelection('resume'); }}
-                            >
-                                Resume
-                            </a>
-                            <a
-                                href="#portfolio"
-                                className={`text-white hover:scale-95 px-6 py-4 transition-transform duration-300 ${selected === 'portfolio' ? 'selected' : ''}`}
-                                onClick={(e) => { e.preventDefault(); handleSelection('portfolio'); }}
-                            >
-                                Portfolio
-                            </a>
-                            <a
-                                href="#contact"
-                                className={`text-white hover:scale-95 px-6 py-4 transition-transform duration-300 ${selected === 'contact' ? 'selected' : ''}`}
-                                onClick={(e) => { e.preventDefault(); handleSelection('contact'); }}
-                            >
-                                Contact
-                            </a>
-                            <a
-                                href="#config"
-                                className={`text-white hover:scale-95 px-6 py-4 transition-transform duration-300 ${selected === 'config' ? 'selected' : ''}`}
-                                onClick={(e) => { e.preventDefault(); handleSelection('config'); }}
-                            >
-                                Config
-                            </a>
+                            {['about me', 'resume', 'portfolio', 'contact', 'config'].map((tab) => (
+                                <a
+                                    key={tab}
+                                    href={`#${tab}`}
+                                    className={`text-white hover:scale-95 px-6 py-4 transition-transform duration-300 ${selected === tab ? 'selected' : ''}`}
+                                    onClick={(e) => { e.preventDefault(); handleSelection(tab); }}
+                                >
+                                    {tab.charAt(0).toUpperCase() + tab.slice(1)}
+                                </a>
+                            ))}
                         </div>
                     </nav>
                 </div>

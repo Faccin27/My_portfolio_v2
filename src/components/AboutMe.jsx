@@ -5,6 +5,8 @@ import IconNote from '../assets/svgs/icon-note.svg';
 
 
 export default function AboutMe() {
+    
+
 
     const services = [
         {
