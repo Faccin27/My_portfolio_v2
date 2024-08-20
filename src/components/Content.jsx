@@ -16,7 +16,6 @@ export default function Component() {
     const [selected, setSelected] = useState('about me');
 
     useEffect(() => {
-        // Carregar e aplicar a cor salva ao iniciar a aplicação
         const savedColor = localStorage.getItem('accentColor');
         if (savedColor) {
             document.documentElement.style.setProperty('--accent-color', savedColor);

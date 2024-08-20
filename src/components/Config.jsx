@@ -13,6 +13,13 @@ function Config() {
         }
     }, []);
 
+    function Combobox() {
+        const [selectOption, setSelectOption] = useState('');
+        const HandleChange = (event) => {
+            setSelectOption(event.target.value);
+        }
+    }
+
     const handleColorChange = (e) => {
         const newColor = e.target.value;
         setColor(newColor);
@@ -38,8 +45,20 @@ function Config() {
             <p className="mt-2">
                 Cor selecionada: <span style={{ color: color }}>{color}</span>
             </p>
+    
+            <label htmlFor="option" className="block mt-4">
+                Escolha seu idioma:
+            </label>
+            <select
+                id="options"
+                className="mt-2 block w-1/4 p-2 bg-zinc-800 text-white border border-transparent rounded focus:outline-none focus:border-accent-color"
+            >
+                <option value="Portugues">Portugues - BRA</option>
+                <option value="Ingles">Ingles - EUA</option>
+            </select>
         </div>
     );
+    
 }
 
 // Novo componente de nível superior
