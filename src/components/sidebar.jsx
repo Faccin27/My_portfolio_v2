@@ -4,7 +4,7 @@ import avatar from '../assets/images/my-avatar.png'
 export default function Component() {
     return (
         <div className="flex items-center justify-center min-h-screen bg-zinc-950 p-4 ">
-            <div className="w-80 bg-zinc-900 rounded-lg overflow-hidden shadow-lg absolute mr-72 border-white border-opacity-10 border-[0.5px] ">
+            <div className="w-80 bg-zinc-900 rounded-lg overflow-hidden shadow-lg absolute ml-[15%] border-white border-opacity-10 border-[0.5px] ">
                 <div className="p-8 text-center space-y-6 ">
                     <div className="relative w-40 h-40 mx-auto">
                         <div className="absolute inset-2 bg-zinc-800 rounded-3xl overflow-hidden">

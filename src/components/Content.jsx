@@ -50,7 +50,7 @@ export default function Component() {
     };
 
     return (
-        <div className="flex items-center justify-center min-h-screen bg-zinc-950 p-6">
+        <div className="flex items-center justify-center min-h-screen bg-zinc-950 p-6 ml-[15%]">
             <div className="bg-zinc-900 rounded-lg w-full max-w-4xl mx-auto border-white border-opacity-10 border-[0.5px] min-w-[896px] min-h-[600px]">
                 <div className="relative flex items-center justify-between mb-6">
                     <h2 className="text-3xl font-semibold text-white relative mt-7 ml-8">
