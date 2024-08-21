@@ -6,8 +6,6 @@ import IconNote from '../assets/svgs/icon-note.svg';
 
 export default function AboutMe() {
     
-
-
     const services = [
         {
             icon: IconDev,
@@ -51,7 +49,7 @@ export default function AboutMe() {
                         <div className="p-5">
                             <div className="flex items-center mb-4">
                                 <div className="w-12 h-12 rounded-full flex items-center justify-center mr-4">
-                                    <img src={service.icon} alt={`${service.title} icon`} className="w-6 h-6 text-white" />
+                                    <img src={service.icon} alt={`${service.title} icon`} className="w-6 h-6 text-white selected" />
                                 </div>
                                 <h3 className="text-lg font-semibold text-gray-100">{service.title}</h3>
                             </div>
