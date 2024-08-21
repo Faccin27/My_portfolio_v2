@@ -20,10 +20,16 @@ export default function Component() {
         if (savedColor) {
             document.documentElement.style.setProperty('--accent-color', savedColor);
         }
+
+        const savedSection = localStorage.getItem('selectedSection');
+        if (savedSection) {
+            setSelected(savedSection);
+        }
     }, []);
 
     const handleSelection = (section) => {
         setSelected(section);
+        localStorage.setItem('selectedSection', section); // Isso salva no local storage
     };
 
     const renderContent = () => {
