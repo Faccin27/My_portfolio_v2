@@ -1,4 +1,4 @@
-import { MailIcon, PhoneIcon, CalendarIcon, MapPinIcon, FacebookIcon, TwitterIcon, InstagramIcon } from 'lucide-react'
+import { MailIcon, PhoneIcon, CalendarIcon, MapPinIcon, MessageCirclePlus, Github , Linkedin } from 'lucide-react'
 import avatar from '../assets/images/my-avatar.png'
 
 export default function Component() {
@@ -52,13 +52,13 @@ export default function Component() {
                 </div>
                 <div className="flex justify-center space-x-6 p-6 border-t border-gray-700">
                     <a href="#" className="text-gray-400 hover:text-white">
-                        <FacebookIcon className="w-6 h-6" />
+                        <MessageCirclePlus className="w-6 h-6" />
                     </a>
                     <a href="#" className="text-gray-400 hover:text-white">
-                        <TwitterIcon className="w-6 h-6" />
+                        <Github  className="w-6 h-6" />
                     </a>
                     <a href="#" className="text-gray-400 hover:text-white">
-                        <InstagramIcon className="w-6 h-6" />
+                        <Linkedin className="w-6 h-6" />
                     </a>
                 </div>
             </div>
